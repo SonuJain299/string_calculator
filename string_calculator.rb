@@ -3,7 +3,7 @@ class StringCalculator
     begin
       return 0 if numbers.strip.empty?
   
-      delimiters = [',', "'",'\n','|']
+      delimiters = [',', "'",'\n','|',';']
       numbers = numbers.split(Regexp.union(delimiters))
       numbers = numbers.map(&:to_i)
       negatives = numbers.select { |n| n < 0 }
