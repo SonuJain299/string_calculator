@@ -9,7 +9,7 @@ class StringCalculator
       negatives = numbers.select { |n| n < 0 }
       raise  if negatives.any?
      rescue Exception => ex
-       return "negative numbers not allowed"
+       return "negative numbers not allowed  #{negatives.join(',')}"
      end
     numbers.sum
   end
